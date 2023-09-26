@@ -1,9 +1,9 @@
 const orders = [
-  { orderNumber: 10102 },
-  { orderNumber: 10103 },
-  { orderNumber: 10104 },
-  { orderNumber: 10105 },
-  { orderNumber: 10106 }
+  { orderNumber: 10102, title: "My best order" },
+  { orderNumber: 10103, title: "Newyear gifts" },
+  { orderNumber: 10104, title: "Books for school" },
+  { orderNumber: 10105, title: "Collectible vinyl record set" },
+  { orderNumber: 10106, title: "Food" }
 ];
 
 // const resultArray = [
