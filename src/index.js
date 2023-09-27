@@ -1,38 +1,122 @@
 const orders = [
-  { orderNumber: 10102, title: "My best order" },
-  { orderNumber: 10103, title: "Newyear gifts" },
-  { orderNumber: 10104, title: "Books for school" },
-  { orderNumber: 10105, title: "Collectible vinyl record set" },
-  { orderNumber: 10106, title: "Food" }
+  {
+    id: "OR123",
+    title: "Order 1",
+    date: "15.09.23"
+  },
+  {
+    id: "OR456",
+    title: "Order 2",
+    date: "18.09.23"
+  },
+  {
+    id: "OR789",
+    title: "Order 3",
+    date: "20.09.23"
+  },
+  {
+    id: "OR234",
+    title: "Order 4",
+    date: "22.09.23"
+  },
+  {
+    id: "OR567",
+    title: "Order 5",
+    date: "25.09.23"
+  }
 ];
 
-// const resultArray = [
-//   { orderNumber: 10102 },
-//   { orderNumber: 10106 },
-//   { orderNumber: 10103 },
-//   { orderNumber: 10104 },
-//   { orderNumber: 10105 }
-// ];
-
-const orderDetails = [
-  { orderNumber: 10102, amount: 39, priceEach: "95.55" },
-  { orderNumber: 10102, amount: 41, priceEach: "43.13" },
-  { orderNumber: 10103, amount: 26, priceEach: "214.30" },
-  { orderNumber: 10103, priceEach: "119.67" },
-  { orderNumber: 10103, amount: 27, priceEach: "121.64" },
-  { orderNumber: 10103, priceEach: "94.50" },
-  { orderNumber: 10103, amount: 22, priceEach: "58.34" },
-  { orderNumber: 10103, priceEach: "92.19" },
-  { orderNumber: 10104, amount: 34, priceEach: "131.44" },
-  { orderNumber: 10104, amount: 41, priceEach: "111.39" },
-  { orderNumber: 10104, priceEach: "135.90" },
-  { orderNumber: 10104, amount: 29, priceEach: "122.73" },
-  { orderNumber: 10104, amount: 23, priceEach: "165.95" },
-  { orderNumber: 10105, amount: 50, priceEach: "127.84" },
-  { orderNumber: 10105, amount: 41, priceEach: "205.72" },
-  { orderNumber: 10105, amount: 29, priceEach: "141.88" },
-  { orderNumber: 10105, amount: 22, priceEach: "136.59" },
-  { orderNumber: 10106, amount: 36, priceEach: "134.04" },
-  { orderNumber: 10106, priceEach: "81.10" },
-  { orderNumber: 10106, amount: 41, priceEach: "80.86" }
+const orderItems = [
+  {
+    orderId: "OR123",
+    itemTitle: "Apple GOLD",
+    itemPrice: 5.99,
+    amount: 3
+  },
+  {
+    orderId: "OR123",
+    itemTitle: "Potatoes",
+    itemPrice: 2.49,
+    amount: 2
+  },
+  {
+    orderId: "OR123",
+    itemTitle: "Mellon",
+    itemPrice: 8.99,
+    amount: 3
+  },
+  {
+    orderId: "OR456",
+    itemTitle: "USB Mouse",
+    itemPrice: 29.99,
+    amount: 1
+  },
+  {
+    orderId: "OR456",
+    itemTitle: "Apple lightning",
+    itemPrice: 15.99,
+    amount: 2
+  },
+  {
+    orderId: "OR456",
+    itemTitle: "Gamepad",
+    itemPrice: 27.99,
+    amount: 1
+  },
+  {
+    orderId: "OR789",
+    itemTitle: 'Book "Clean Code"',
+    itemPrice: 9.99,
+    amount: 4
+  },
+  {
+    orderId: "OR789",
+    itemTitle: "Toy Buz Lighter",
+    itemPrice: 12.99,
+    amount: 3
+  },
+  {
+    orderId: "OR234",
+    itemTitle: "Kitchen Appliances Set",
+    itemPrice: 34.99,
+    amount: 1
+  },
+  {
+    orderId: "OR567",
+    itemTitle: "Socks",
+    itemPrice: 24.99,
+    amount: 2
+  },
+  {
+    orderId: "OR567",
+    itemTitle: "Sports Equipment",
+    itemPrice: 49.99,
+    amount: 1
+  },
+  {
+    orderId: "OR567",
+    itemTitle: "Outdoor Gear",
+    itemPrice: 19.99,
+    amount: 3
+  }
 ];
+
+/**
+ * Results:
+ *
+ * total prices:
+ * OR123 = 49.92
+ * OR456 = 89.96
+ * OR789 = 78.93
+ * OR234 = 34.99
+ * OR567 = 159.94
+ *
+ * initial:
+ * ["OR123", "OR456", "OR789", "OR234", "OR567"]
+ * sorted:
+ * ["OR234", "OR123", "OR789", "OR456", "OR567"]
+ */
+
+/**
+ * Create function that sort orders by it's total price
+ */
