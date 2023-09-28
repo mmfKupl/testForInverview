@@ -102,21 +102,5 @@ const orderItems = [
 ];
 
 /**
- * Results:
- *
- * total prices:
- * OR123 = 49.92
- * OR456 = 89.96
- * OR789 = 78.93
- * OR234 = 34.99
- * OR567 = 159.94
- *
- * initial:
- * ["OR123", "OR456", "OR789", "OR234", "OR567"]
- * sorted:
- * ["OR234", "OR123", "OR789", "OR456", "OR567"]
- */
-
-/**
  * Create function that sort orders by it's total price
  */
