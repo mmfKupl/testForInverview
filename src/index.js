@@ -102,5 +102,5 @@ const orderItems = [
 ];
 
 /**
- * Create function that sort orders by it's total price
+ * Create a function that sorts orders by their total price.
  */
